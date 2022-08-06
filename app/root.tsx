@@ -3,7 +3,13 @@ import { LiveReload } from '@remix-run/react';
 import React from 'react';
 import globalStylesUrl from '~/styles/global.css';
 
-export const links = () => [{ rel: 'stylesheet', href: globalStylesUrl }];
+export const links = () => [
+  { rel: 'stylesheet', href: globalStylesUrl },
+  {
+    rel: 'stylesheet',
+    href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
+  },
+];
 
 export const meta = () => {
   const description = 'This is a website where a user can post blogs';

@@ -1,15 +1,14 @@
 import { Link, useLoaderData } from '@remix-run/react';
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
 
 type Props = {};
 
 export const loader = () => {
   const data = {
     posts: [
-      { id: 1, title: 'Post 1', body: 'This is the first post' },
-      { id: 1, title: 'Post 2', body: 'This is the second post' },
-      { id: 1, title: 'Post 3', body: 'This is the third post' },
-      { id: 1, title: 'Post 4', body: 'This is the fourth post' },
+      { id: 1, title: 'Post 1', body: 'This is the first post' }, 
+      { id: 2, title: 'Post 2', body: 'This is the second post' },
+      { id: 3, title: 'Post 3', body: 'This is the third post' },
+      { id: 4, title: 'Post 4', body: 'This is the fourth post' },
     ],
   };
   return data;
@@ -31,7 +30,7 @@ const Posts = (props: Props) => {
           (post: { title: string | null; body: string | null; id: number }) => {
             return (
               <li key={post.id}>
-                <Link to={`/posts/${post.title}`}>
+                <Link to={`/posts/${post.id}`}>
                   <h1>{post.title}</h1>
                 </Link>
                 <p>{post.body}</p>

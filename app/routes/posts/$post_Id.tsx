@@ -3,7 +3,7 @@ import { useParams } from '@remix-run/react';
 
 type Props = {};
 
-const Post = (props: Props) => {
+const PostItem = (props: Props) => {
   const params = useParams();
   const id = params.post_Id;
   return (
@@ -13,4 +13,4 @@ const Post = (props: Props) => {
   );
 };
 
-export default Post;
+export default PostItem;
